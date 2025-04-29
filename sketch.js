@@ -22,14 +22,24 @@ function preload(){
         //console.log(img);
 
         img.onload = function() {
-            const canvas = document.getElementById("canvas");
-            const ctx = canvas.getContext("2d");
-            // Leert das Canvas und zeichnet das Bild
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.drawImage(img, 0, 0, canvas.width, canvas.height); // Bild an die Größe des Canvas anpassen
-            classifier.classify(img, gotResults, 5);
+          let imgwidth;
+          let imgheight;
+          console.log("Breite des Bildes: " + img.width + " / Höhe des Bildes: " + img.height);
+          if (img.width >= img.height) {
+            imgwidth = 500;
+            imgheight = img.height / img.width * 500;
+          } else {
+            imgheight = 500;
+            imgwidth = img.width / img.height * 500;
+          }
+            
+          const canvas = document.getElementById("canvas");
+          const ctx = canvas.getContext("2d");
+          ctx.clearRect(0, 0, canvas.width, canvas.height); // Leert das Canvas und zeichnet das Bild
+          ctx.drawImage(img, 0, 0, imgwidth, imgheight); // Bild an die Größe des Canvas anpassen
+          classifier.classify(img, gotResults, 5);
           
-            document.getElementById("column-l").style.removeProperty("display");
+          document.getElementById("column-l").style.removeProperty("display");
           document.getElementById("column-r").style.removeProperty("display");
         }
     }
