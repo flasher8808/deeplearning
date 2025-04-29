@@ -1,1 +1,82 @@
-<h1>Hello</h1>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script>
+    <script src="https://unpkg.com/ml5@1/dist/ml5.js"></script>
+    <script src="https://cdn.plot.ly/plotly-3.0.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <title>Bild hochladen und anzeigen</title>
+    <style>
+        #canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+  <div class="header">
+    <p>Modul Deep Learning</p>
+  </div>
+  <div class="center">
+    <div class="aufgabe-a1">
+      <h1>Aufgabe A1</h1>
+      <h2>Korrekt klassifizierte Bilder</h2>
+      <div class="row">
+        <div class="table-a1">
+          <img src="images-a1/IMG_2164.jpg" alt="Getigerte Katze" class="pic">
+        </div>
+        <div class="table-a1">
+          <img src="images-a1/img_2164_plot.png" alt="Getigerte Katze Klassifikation" class="pic">
+        </div>
+        <div class="table-a1">
+          <img src="images-a1/IMG_2137.JPG" alt="Marienkäfer" class="pic">
+        </div>
+        <div class="table-a1">
+          <img src="images-a1/IMG_2137_plot.png" alt="Marienkäfer Klassifikation" class="pic">
+        </div>
+        <div class="table-a1">
+          <img src="images-a1/goldfish.JPEG" alt="Goldfish" class="pic">
+        </div>
+        <div class="table-a1">
+          <img src="images-a1/goldfish.JPEG" alt="Goldfish" class="pic">
+        </div>
+      </div> 
+      <h2>Falsch klassifizierte Bilder</h2>
+    </div>
+    <h1>Aufgabe A2 - Bild hochladen und klassifizieren</h1>
+    <div id="drop_zone">
+      <input type="file" id="upload" accept="image/*">
+      <p>Hier klicken für Bild-Upload</p>
+    </div>
+    
+    <div class="container">
+      <div class="column left" id="column-l">
+        <h2>Eingabebild</h2>
+        <canvas id="canvas" width="500" height="500"></canvas>
+      </div>
+      <div class="column right" id="column-r">
+        <h2>Klassifikation</h2>
+        <p id="dataFromMl5_label"></p>
+        <p id="dataFromMl5_conf"></p>
+        <div id="plot">
+        </div>
+      </div>
+    </div>
+    <div class="discussion">
+      <h1>Diskussion</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+      </p>
+    </div>
+    <div class="doku">
+      <h1>Dokumentation</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+      </p>
+    </div>
+    
+  </div> 
+
+    <script src="sketch.js"></script>
+</body>
+</html>
