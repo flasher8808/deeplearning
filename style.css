@@ -5,9 +5,6 @@ html, body {
 }
 canvas {
   display: block;
-}
-
-#canvas {
   /*border: 1px solid black;*/
 }
 
@@ -79,13 +76,7 @@ input {
     box-sizing: border-box; /* Berücksichtige Padding und Border in der Breite */
 }
 
-.left {
-    /*background-color: #f0f0f0;*/ /* Hintergrundfarbe für die linke Spalte */
-}
 
-.right {
-    /*background-color: #d0d0d0;*/ /* Hintergrundfarbe für die rechte Spalte */
-}
 
 #plot {
   width: 500px;

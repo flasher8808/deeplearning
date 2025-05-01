@@ -39,22 +39,22 @@
       <h2>Falsch klassifizierte Bilder</h2>
       <div class="row">
         <div class="table-a1">
-          <img src="images-a1/no-image.jpg" alt="" class="pic thumbnail">
+          <img src="images-a1/IMG_2167.JPG" alt="Staubsauger" class="pic thumbnail">
         </div>
         <div class="table-a1">
-          <img src="images-a1/no-image.jpg" alt="Klassifikation" class="pic thumbnail">
+          <img src="images-a1/IMG_2167_plot.png" alt="Klassifikation Staubsauger" class="pic thumbnail">
         </div>
         <div class="table-a1">
-          <img src="images-a1/no-image.jpg" alt="" class="pic thumbnail">
+          <img src="images-a1/nasa_earth.jpg" alt="Planet Erde" class="pic thumbnail">
         </div>
         <div class="table-a1">
-          <img src="images-a1/no-image.jpg" alt="Klassifikation" class="pic thumbnail">
+          <img src="images-a1/nasa_earth_plot.png" alt="Klassifikation Planet Erde" class="pic thumbnail">
         </div>
         <div class="table-a1">
-          <img src="images-a1/no-image.jpg" alt="" class="pic thumbnail">
+          <img src="images-a1/milchstrasse.png" alt="Milchstraße" class="pic thumbnail">
         </div>
         <div class="table-a1">
-          <img src="images-a1/no-image.jpg" alt="Klassifikation" class="pic thumbnail">
+          <img src="images-a1/milchstrasse_plot.png" alt="Klassifikation Milchstraße" class="pic thumbnail">
         </div>
       </div> 
     </div>
@@ -80,13 +80,38 @@
     <div class="discussion">
       <h1>Diskussion</h1>
       <p>
+        <ul>
+          <li>Die Trainingsdaten des Modells enthalten viele Bilder, auf denen nicht nur ein Objekt zu sehen ist, sondern mehrere und mit der Bezeichnung keine klare Zuordnung vorgenommen werden kann (Beispiel: rubber_eraser -> zusehen auch Bleistift, Notenbuch, Notenständer)</li>
+          <li>Manche Gegenstände sind in falscher Größe dargestellt (Beispiel: safety_pin)</li>
+          <li>Trainingsdaten enthalten nur ein bestimmtes Set an Objekten / Klassifikationen -> Wird ein Bild mit unbekannten Dingen gezeigt, wird nur bestmöglichste Klasse gefunden was dennoch falsch ist</li>
+        </ul>
         Bei eindeutigen Bildern, die aus dem Trainingsdatensatz stammen erfolgt meist eine korrekte Klassifikation. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
       </p>
     </div>
     <div class="doku">
       <h1>Dokumentation</h1>
+      <h2>Technisch</h2>
       <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        Die Web-Anwendung basiert auf einer HTML-Datei, die mit CSS gestylt und JavaScript interaktiv erweitert wurde. Zusätzlich wurden folgende Frameworks verwendet:
+        <ul>
+          <li>ml5js: Klassifikation der Eingabebilder auf Basis des vortrainierten neuronalen Netzes</li>
+          <li>Plotly: Darstellung der Klassifikationsergebnisse in einem Diagramm</li>
+        </ul>
+      </p>
+      
+      <h2>Fachlich</h2>
+      <p>
+        <i>Erläutern Sie Ihre Implementierung der Logik und alles, was für ihre Lösung wichtig ist (Ansatz, Resultate, Quellen, etc.)</i>
+      </p>
+      <p>
+        Die Anwendung wurde iterativ entwickelt:
+        <ol>
+          <li>Entwicklung der HTML-Basis</li>
+          <li>Implementierung der Bild-Klassifizierung</li>
+          <li>Darstellung der Ergebnisse als Diagramm</li>
+          <li>Generierung / Aussuchen von Beispiel-Bildern</li>
+          <li>Optimierung der grafischen Darstellung</li>
+        </ol>
       </p>
     </div>
     
