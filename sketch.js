@@ -141,9 +141,27 @@ function printPlot(results){
 }
 
 
+// Bildervergrößerung
+const thumbnails = document.querySelectorAll('.thumbnail');
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = document.getElementById('lightboxImage');
+
+
+thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener('click', function() {
+        lightboxImage.src = this.src;
+        lightbox.style.display = 'flex'; 
+    });
+});
+
+lightbox.addEventListener('click', function() {
+    lightbox.style.display = 'none'; 
+});
+
+
 
 function setup() {
-  
+
 }
 
 function draw() {

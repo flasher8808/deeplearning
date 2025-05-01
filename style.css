@@ -115,3 +115,35 @@ input {
   max-width: 90%;
   max-height: 90%;
 }
+
+/*
+body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}*/
+
+.thumbnail {
+  width: 150px;
+  height: auto;
+  margin: 10px;
+  cursor: pointer;
+  z-index: 11;
+}
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  z-index: 10;
+}
