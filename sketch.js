@@ -16,6 +16,21 @@ function preload(){
     const file = event.target.files[0];
     const reader = new FileReader();
 
+    // Überprüfen, ob eine Datei ausgewählt wurde
+    //if (!file) {
+    //  alert('Bitte wählen Sie eine Datei aus.');
+    //  event.preventDefault(); // Verhindert das Absenden des Formulars
+    //  return;
+    //}
+
+    // Überprüfen, ob die Datei ein Bild ist
+    const validImageTypes = ['image/jpeg', 'image/png'];
+    if (!validImageTypes.includes(file.type)) {
+        alert('Die hochgeladene Datei ist kein Bild. Bitte wählen Sie ein Bild im JPEG-, PNG-Format aus.');
+        event.preventDefault();
+        return;
+    }
+
     reader.onload = function(e) {
         const img = new Image();
         img.src = e.target.result;
@@ -26,7 +41,7 @@ function preload(){
           let imgheight;
           let imgdx = 0;
           let imgdy = 0;
-          console.log("Breite des Bildes: " + img.width + " / Höhe des Bildes: " + img.height);
+          //console.log("Breite des Bildes: " + img.width + " / Höhe des Bildes: " + img.height);
           if (img.width >= img.height) {
             imgwidth = 500;
             imgheight = img.height / img.width * 500;
