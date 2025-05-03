@@ -103,6 +103,11 @@ input {
   opacity: 1; /* Overlay sichtbar machen */
 }
 
+.row {
+  display: flex;
+  align-items: center;
+}
+
 /* Clear floats after the columns    - kann evtl. raus? */
 .row:after {
   content: "";
@@ -146,7 +151,8 @@ body {
 
 .image-container {
   position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
 }
 
 .image {
