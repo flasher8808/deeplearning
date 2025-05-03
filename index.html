@@ -10,7 +10,7 @@
 </head>
 <body>
   <div class="header">
-    <p>Modul Deep Learning</p>
+    <p>Modul Deep Learning - ESA 1</p>
   </div>
   <div class="center">
     <div class="aufgabe-a1">
@@ -115,17 +115,14 @@
     </div>
     <div class="discussion">
       <h1>Diskussion</h1>
-      <p>
-        <i>Diskutieren Sie Ihre Ergebnisse (unter den Resultaten auf der gleichen HTML-Seite, max. 10 Sätze). Was haben Sie beobachtet/gelernt?  Bei welchen Bildern hat die Klassifikation funktioniert und bei welchen nicht und warum ist das wohl so?</i>
-        <p>Bei Bildern, die aus dem Trainingsdatensatz stammen, erfolgte in allen Stichproben eine korrekte Klassifikation mit einer sehr hohen Wahrscheinlichkeit. Werden eigene Bilder von gleichen Objekten hochgeladen  (Beispiel: Goldfisch, Marienkäfer oder Sicherheitsnadel), dann wird ebenfalls mit sehr hoher Wahrscheinlichkeit die korrekte Klassifikation vorgenommen.
-        Sind verschiedene Objekte auf einem Bild zu erkennen, dann sinkt die Wahrscheinlichkeit einer korrekten Klassifikation erheblich und es kommt in einigen Fällen zu falschen Zuordnungen. Bei dem dritten Beispiel der korrekten Zuordnung beträgt die Wahrscheinlichkeit, dass es sich um eine Küste handelt nur knapp 19%. Es ist somit eine gewisse Unsicherheit damit verbunden. Bilder von / mit Personen sind besonders schwierig vom Modell zu klassifizieren - aus Datenschutzgründen soll kein Beispiel gezeigt werden.</p>
-        <p>Bei den falsch klassifizierten Bildern kann es unterschiedliche Gründe dafür geben:
-          <ul>
-            <li>Trainingsdaten enthalten nur ein bestimmtes Set an Objekten / Klassifikationen -> Wird ein Bild mit unbekannten Dingen gezeigt (Beispiel: Planet Erde), wird nur bestmöglichste Klasse gefunden was dennoch falsch ist</li>
-            <li>Die Trainingsdaten des Modells enthalten viele Bilder, auf denen nicht nur ein Objekt zu sehen ist, sondern mehrere und mit der Bezeichnung keine klare Zuordnung vorgenommen werden kann (Beispiel: rubber_eraser -> zusehen auch Bleistift, Notenbuch, Notenständer)</li>
-            <li>Manche Gegenstände sind in "falscher" Größe / Relation dargestellt (Beispiel: safety_pin)</li>
-          </ul>
-        </p>
+      <p>Bei Bildern, die aus dem Trainingsdatensatz stammen, erfolgte in allen Stichproben eine korrekte Klassifikation mit einer sehr hohen Wahrscheinlichkeit. Werden eigene Bilder von gleichen Objekten hochgeladen  (Beispiel: Goldfisch, Marienkäfer oder Sicherheitsnadel), dann wird ebenfalls mit sehr hoher Wahrscheinlichkeit die korrekte Klassifikation vorgenommen.
+      Sind verschiedene Objekte auf einem Bild zu erkennen, dann sinkt die Wahrscheinlichkeit einer korrekten Klassifikation erheblich und es kommt in einigen Fällen zu falschen Zuordnungen. Bei dem dritten Beispiel der korrekten Zuordnung beträgt die Wahrscheinlichkeit, dass es sich um eine Küste handelt nur knapp 19%. Es ist somit eine gewisse Unsicherheit damit verbunden. Bilder von / mit Personen sind besonders schwierig vom Modell zu klassifizieren - aus Datenschutzgründen soll kein Beispiel gezeigt werden.</p>
+      <p>Bei den falsch klassifizierten Bildern kann es unterschiedliche Gründe dafür geben:
+        <ul>
+          <li>Trainingsdaten enthalten nur ein bestimmtes Set an Objekten / Klassifikationen -> Wird ein Bild mit unbekannten Dingen gezeigt (Beispiel: Planet Erde), wird nur bestmöglichste Klasse gefunden was dennoch falsch ist</li>
+          <li>Die Trainingsdaten des Modells enthalten viele Bilder, auf denen nicht nur ein Objekt zu sehen ist, sondern mehrere und mit der Bezeichnung keine klare Zuordnung vorgenommen werden kann (Beispiel: n04116512_rubber_eraser.JPEG -> zusehen auch Bleistift, Notenbuch, Notenständer)</li>
+          <li>Manche Gegenstände sind in "falscher" Größe / Relation dargestellt (Beispiel: n04127249_safety_pin.JPEG)</li>
+        </ul>
       </p>
     </div>
     <div class="doku">
@@ -141,9 +138,6 @@
       
       <h2>Fachlich</h2>
       <p>
-        <i>Erläutern Sie Ihre Implementierung der Logik und alles, was für ihre Lösung wichtig ist (Ansatz, Resultate, Quellen, etc.)</i>
-      </p>
-      <p>
         Die Anwendung wurde iterativ entwickelt:
         <ul>
           <li>Entwicklung der HTML-Basis</li>
@@ -156,6 +150,7 @@
         <ul>
           <li><a href="https://editor.p5js.org/" target="_blank">https://editor.p5js.org/</a></li>
           <li><a href="https://www.w3schools.com/css/default.aspx" target="_blank">https://www.w3schools.com</a></li>
+          <li>Bei Problemen aller Art <a href="https://stackoverflow.com" target="_blank">https://stackoverflow.com</a></li>
         </ul>
       </p>
     </div>
