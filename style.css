@@ -10,6 +10,8 @@ canvas {
 
 p {
   line-break: auto;
+  hyphens: auto;
+  text-align: justify;
 }
 
 .center {
@@ -143,11 +145,13 @@ body {
   align-items: center;
   z-index: 10;
 }
+
 .lightbox img {
   max-width: 90%;
   max-height: 90%;
   z-index: 10;
 }
+
 
 .image-container {
   position: relative;
@@ -156,7 +160,6 @@ body {
 }
 
 .image {
-  /*width: 300px; /* Passt die Größe an */
   height: auto;
   transition: opacity 0.3s; /* Sanfter Übergang für das Bild */
 }
@@ -176,7 +179,7 @@ body {
 }
 
 .image-container:hover .image {
-  opacity: 0.8; /* Bild verblassen */
+  opacity: 0.3; /* Bild verblassen */
 }
 
 .image-container:hover .overlay {
