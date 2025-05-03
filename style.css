@@ -95,17 +95,21 @@ input {
   width: 16.66%;
 }
 
-/* Clear floats after the columns */
+.image-container:hover .image {
+  opacity: 0.5; /* Bild verblassen */
+}
+
+.image-container:hover .overlay {
+  opacity: 1; /* Overlay sichtbar machen */
+}
+
+/* Clear floats after the columns    - kann evtl. raus? */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
 
-.pic {
-  max-width: 90%;
-  max-height: 90%;
-}
 
 /*
 body {
@@ -115,11 +119,12 @@ body {
 }*/
 
 .thumbnail {
-  width: 150px;
-  height: auto;
+  max-width: 150px;
+  max-height: 150px;
   margin: 10px;
   cursor: pointer;
   z-index: 11;
+  justify-content: center;
 }
 .lightbox {
   display: none;
@@ -137,4 +142,42 @@ body {
   max-width: 90%;
   max-height: 90%;
   z-index: 10;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image {
+  /*width: 300px; /* Passt die Größe an */
+  height: auto;
+  transition: opacity 0.3s; /* Sanfter Übergang für das Bild */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background-color: rgba(0, 0, 0, 0.1); /* Dunkler Overlay eckiger Kasten */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Anfangszustand unsichtbar */
+  transition: opacity 0.3s; /* Sanfter Übergang für den Overlay */
+}
+
+.image-container:hover .image {
+  opacity: 0.8; /* Bild verblassen */
+}
+
+.image-container:hover .overlay {
+  opacity: 1; /* Overlay sichtbar machen */
+}
+
+.icon {
+  color: white;
+  font-size: 36px; /* Größe des Icons anpassen */
 }

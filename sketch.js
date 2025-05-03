@@ -162,12 +162,16 @@ const lightbox = document.getElementById('lightbox');
 const lightboxImage = document.getElementById('lightboxImage');
 
 
-thumbnails.forEach(thumbnail => {
-    thumbnail.addEventListener('click', function() {
-        lightboxImage.src = this.src;
-        lightbox.style.display = 'flex'; 
-    });
+document.querySelectorAll('.image-container').forEach(item => {
+  item.addEventListener('click', event => {
+      const imgSrc = item.querySelector('.image').src;
+      
+      lightboxImage.src = imgSrc;
+      lightbox.style.display = 'flex'; 
+    
+  });
 });
+
 
 lightbox.addEventListener('click', function() {
     lightbox.style.display = 'none'; 
