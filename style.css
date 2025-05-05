@@ -40,7 +40,6 @@ p {
   vertical-align: middle;
   position: fixed;
   z-index: 9;
-  
 }
 
 
@@ -52,12 +51,10 @@ p {
   padding: 3rem;
   line-height: 140%;
   font-size: 2.6rem;
-  
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  
 }
 
 input {
