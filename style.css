@@ -50,6 +50,7 @@ p {
   height: 80px;
   color: rgb(120, 120, 120);
   border: 4px dashed #171a6e;
+  border-radius: 15px;
   padding: 3rem;
   line-height: 140%;
   font-size: 2.6rem;
