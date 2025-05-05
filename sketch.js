@@ -16,13 +16,6 @@ function preload(){
     const file = event.target.files[0];
     const reader = new FileReader();
 
-    // Überprüfen, ob eine Datei ausgewählt wurde
-    //if (!file) {
-    //  alert('Bitte wählen Sie eine Datei aus.');
-    //  event.preventDefault(); // Verhindert das Absenden des Formulars
-    //  return;
-    //}
-
     // Überprüfen, ob die Datei ein Bild ist
     const validImageTypes = ['image/jpeg', 'image/png'];
     if (!validImageTypes.includes(file.type)) {
@@ -78,11 +71,7 @@ function gotResults(results){
   //console.log(results);
   label = results[0].label;
   conf = results[0].confidence;
-  //console.log(label);
-  //console.log(conf);
-  
-  //document.getElementById("dataFromMl5_label").textContent = "Guess: " + label;
-  //document.getElementById("dataFromMl5_conf").textContent = "Confidence: " + round(conf, 2);
+
   printPlot(results);
 }
 
@@ -93,12 +82,10 @@ function printPlot(results){
   let data;
   let x = [];
   let y = [];
-  //data = JSON.stringify(results);
   //console.log(data);
   
   for (let i = 0; i < 5; i++){
     //console.log(results[i]);
-    //x.push(results[i].label);
     if (results[i].label.includes(",")) {
       let tmp = results[i].label.split(",");
       console.log(tmp);
